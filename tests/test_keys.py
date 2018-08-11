@@ -7,6 +7,7 @@ from bitmerchant.network import BitcoinMainNet
 from bitmerchant.network import BitcoinTestNet
 from bitmerchant.network import DogecoinMainNet
 from bitmerchant.network import LitecoinMainNet
+from bitmerchant.network import BitcoreMainNet
 from bitmerchant.wallet.keys import ChecksumException
 from bitmerchant.wallet.keys import IncompatibleNetworkException
 from bitmerchant.wallet.keys import KeyParseError  # TODO test this
@@ -274,3 +275,25 @@ class TestVectors(TestCase):
         secret = "T9PBs5kq9QrkBPxeGNWKitMi4XuFVr25jaXTnuopLVZxCUAJbixA"
         address = "Lgb6tdqmdW3n5E12johSuEAqRMt4kAr7yu"
         self._test(LitecoinMainNet, secret, address, True)
+
+    # https://github.com/LIMXTEC/BitCore/blob/0.15/src/test/key_tests.cpp
+    def test_bitcore_1(self):
+        secret = "6uGFQ4DSW7zh1viHZi6iiVT17CncvoaV4MHvGvJKPDaLCdymj87"
+        address = "LiUo6Zn39joYJBzPUhssbDwAywhjFcoHE3"
+        self._test(BitcoreMainNet, secret, address, False)
+
+    def test_bitcore_2(self):
+        secret = "6vVo7sPkeLTwVdAntrv4Gbnsyr75H8ChD3P5iyHziwaqe8mCYR5"
+        address = "LZJvLSP5SGKcFS13MHgdrVhpFUbEMB5XVC"
+        self._test(BitcoreMainNet, secret, address, False)
+
+    def test_bitcore_3(self):
+        secret = "T3gJYmBuZXsdd65E7NQF88ZmUP2MaUanqnZg9GFS94W7kND4Ebjq"
+        address = "Lh2G82Bi33RNuzz4UfSMZbh54jnWHVnmw8"
+        self._test(BitcoreMainNet, secret, address, False)
+
+    def test_bitcore_4(self):
+        secret = "T986ZKRRdnuuXLeDZuKBRrZW1ujotAncU9WTrFU1n7vMgRW75ZtF"
+        address = "LWegHWHB5rmaF5rgWYt1YN3StapRdnGJfU"
+        self._test(BitcoreMainNet, secret, address, False)
+

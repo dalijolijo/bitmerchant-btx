@@ -14,7 +14,7 @@ Make sure all authors are accounted for in the AUTHORS file.
 make authors
 ```
 
-Update `bitmerchant/_version.py` following semantic versioning guidelines.
+Update `bitmerchant-btx/_version.py` following semantic versioning guidelines.
 
 Ensure the sdist builds correctly
 

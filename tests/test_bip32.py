@@ -1110,11 +1110,11 @@ class _TestWalletVectorsBitcore(_TestWalletVectorsBip32org):
 class TestWalletVectorsBitcore1(_TestWalletVectorsBitcore):
     def test_m_0p(self):
         vector = [
-            'Ltpv74V6By3UsgGzZw27UtyGEkYeGUUyP8DeDLwnVNwrkaUHxnai5mJbmAG6JHaKSnZhZMxXyhQXU4NTqqygJxKiNt1MdKgr7jEuDZ4uagqrKDa',  # nopep8
-            'TAqpVhaoeiN17bd7keFxKc4nAhAXFaEVuXQcyRQvBh51LxPLkAAX',
-            'Ltub2VfRnkU27poxBoiwjWTeKLNri3BATNnJHs3pAMi9gmFtZ9mnQgM2mmNMYdmG16ksFsF3NURRQBirSkAnNTr4gm7Mq85EBCUNCopnJieQvAr',  # nopep8
-            '027bd1f86dcd5bab63040f8f334e56d206959031df9291e4721e018e7206dcf8a2',  # nopep8
-            'Lf9q6hjcHBcyqLbFvUAeW8XrAVtmjksK2x'
+            'xprv9s21ZrQH143K3QTDL4LXw2F7HEK3wJUD2nW2nRk4stbPy6cq3jPPqjiChkVvvNKmPGJxWUtg6LnF5kejMRNNU3TGtRBeJgk33yuGBxrMPHi',  # nopep8 / BIP32 Extended Key
+            'L52XzL2cMkHxqxBXRyEpnPQZGUs3uKiL3R11XbAdHigRzDozKZeW', # Private Key (WIF) 
+            'xpub661MyMwAqRbcFtXgS5sYJABqqG9YLmC4Q1Rdap9gSE8NqtwybGhePY2gZ29ESFjqJoCu1Rupje8YtGqsefD265TMg7usUDFdp6W1EGMcet8',  # nopep8 / Derived Public Key
+            '0339a36013301597daef41fbe593a02cc513d0b55527ec2df1050e2e8ff49c85c2',  # nopep8 / Public Key (Hex)
+            '15mKKb2eos1hWa6tisdPwwDC1a5J1y9nma' # Address
         ]
         key = self.master_key.get_child(0, True)
         self._test(key, *vector)
@@ -1122,11 +1122,11 @@ class TestWalletVectorsBitcore1(_TestWalletVectorsBitcore):
 
     def test_m_0p_1(self):
         vector = [
-            'Ltpv76dbn3DT9k1QZk4jobJ9U4i32rWgwg361gCWCBw6YpEmWd6njuHBnqD9GsP96ZuvPzohf53SwM2WCpd9tRAyxKZ98PHehciT676FoTUJFjG',  # nopep8
-            'T3mHwrvvGQAQYgw6NkEAbvnEW7DuVhHAoHxbrvdrRnCH9ugE3d5W',
-            'Ltub2XowNpdzPtYNBcma4CnXYeYFURCt1vbk6CJXsAhPV12N6zHs4pKcoSKQXHHb7cTDY9gUxQ95EBYxTTYE2cqjZmvw64uvXAqgx5f5i8DTtnd',  # nopep8
-            '0391f78495549245157979b19b8c6ddad42f4092602819d85278ad22db87cb6730',  # nopep8
-            'LPJZvWyD3i6JSMnwJtcLEMX7kYbPLbTqzE'
+            'xprv9uHRZZhk6KAJC1avXpDAp4MDc3sQKNxDiPvvkX8Br5ngLNv1TxvUxt4cV1rGL5hj6KCesnDYUhd7oWgT11eZG7XnxHrnYeSvkzY7d2bhkJ7',  # nopep8 / BIP32 Extended Key
+            'L5BmPijJjrKbiUfG4zbiFKNqkvuJ8usooJmzuD7Z8dkRoTThYnAT', # Private Key (WIF)
+            'xpub68Gmy5EdvgibQVfPdqkBBCHxA5htiqg55crXYuXoQRKfDBFA1WEjWgP6LHhwBZeNK1VTsfTFUHCdrfp1bgwQ9xv5ski8PX9rL2dZXvgGDnw',  # nopep8 / Derived Public Key
+            '035a784662a4a20a65bf6aab9ae98a6c068a81c52e4b032c0fb5400c706cfccc56',  # nopep8 / Public Key (Hex)
+            '19Q2WoS5hSS6T8GjhK8KZLMgmWaq4neXrh' # Address
         ]
         key = (self.master_key.get_child(0, True)
                .get_child(1))
@@ -1135,11 +1135,11 @@ class TestWalletVectorsBitcore1(_TestWalletVectorsBitcore):
 
     def test_m_0p_1_2p(self):
         vector = [
-            'Ltpv77EctZnoc1SgaSffnPGVABbenBaeYBsiiNquoszDNKphMw3i4AHfJ2NaKRgKV5mUjw9qez5qRF1HTZxXegUE3W1ebdbWVETdKDMxa587Gnk',  # nopep8
-            'T9VTp2qTW18DYLN6Rc6a2XP2cWy2mfLqNAQZDLJm27TdsZUG9jL7',
-            'Ltub2YQxVMDLr9yeCKNW2zksEmRsDkGqcSSNntwwUrkWJWcHxJEnP5L6JdUqZpdzFr7ijwz4xH3fL9E9jn5246F2nNHhPsSpWrk8Bu5zYDb5LTY',  # nopep8
-            '03c0767a6c05d488b79465e973604eeeb008bfc8646877afb6237e483937beb788',  # nopep8
-            'LdkUqtqarziHXTnC6borMadsfQesVzEJXx'
+            'xprv9wTYmMFdV23N2TdNG573QoEsfRrWKQgWeibmLntzniatZvR9BmLnvSxqu53Kw1UmYPxLgboyZQaXwTCg8MSY3H2EU4pWcQDnRnrVA1xe8fs',  # nopep8 / BIP32 Extended Key
+            'KyFAjQ5rgrKvhXvNMtFB5PCSKUYD1yyPEe3xr3T34TZSUHycXtMM', # Private Key (WIF)
+            'xpub6ASuArnXKPbfEwhqN6e3mwBcDTgzisQN1wXN9BJcM47sSikHjJf3UFHKkNAWbWMiGj7Wf5uMash7SyYq527Hqck2AxYysAA7xmALppuCkwQ',  # nopep8 / Derived Public Key
+            '03501e454bf00751f24b1b489aa925215d66af2234e3891c3b21a52bedb3cd711c',  # nopep8 / Public Key (Hex)
+            '1JQheacLPdM5ySCkrZkV66G2ApAXe1mqLj' # Address
         ]
         key = (self.master_key.get_child(0, True)
                .get_child(1)
@@ -1149,11 +1149,11 @@ class TestWalletVectorsBitcore1(_TestWalletVectorsBitcore):
 
     def test_m_0p_1_2p_2(self):
         vector = [
-            'Ltpv7AHK5coBDoEZFnWC7WtcSJq58fWbJuM2FrmWVitWz9HoeQijqcW48v1N3aYHp8hkgYKHbzvqydDdPu6Lv6MykvxWhCfifdP5yAJQzHqWKeg',  # nopep8
-            'T9tMP13KhuheJkJGFXaAM2REkFCDfHh5ebF1EHYDShTFG6t775gp',
-            'Ltub2bTegQDiTwmWsfD2N8NzWtfHaECnP9ugLNsYAheovL5QEmupAXYV9X7dHvJmMptrs9dHRkfPxY7iTYz5Mp8nAPkR26GzqCMVkiV7bVPCn9b',  # nopep8
-            '0227bbb5af873704535c17e7cf3cbd087760d0f4027ec5a44aa35afaba6e7d0266',  # nopep8
-            'LgML9sstrXSnbxEv5UT9VYgp2dE7Je64FH'
+            'xprv9z4pot5VBttmtdRTWfWQmoH1taj2axGVzFqSb8C9xaxKymcFzXBDptWmT7FwuEzG3ryjH4ktypQSAewRiNMjANTtpgP4mLTj34bhnZX7UiM',  # nopep8 / BIP32 Extended Key
+            'L43t3od1Gh7Lj55Bzjj1xDAgJDcL7YFo2nEcNaMGiyRZS1CidBVU', # Private Key (WIF)
+            'xpub6D4BDPcP2GT577Vvch3R8wDkScZWzQzMMUm3PWbmWvVJrZwQY4VUNgqFJPMM3No2dFDFGTsxxpG5uJh7n7epu4trkrX7x7DogT5Uv6fcLW5',  # nopep8 / Derived Public Key
+            '0357bfe1e341d01c69fe5654309956cbea516822fba8a601743a012a7896ee8dc2',  # nopep8 / Public Key (Hex)
+            '1NjxqbA9aZWnh17q1UW3rB4EPu79wDXj7x' # Address
         ]
         key = (self.master_key.get_child(0, True)
                .get_child(1)
@@ -1164,11 +1164,11 @@ class TestWalletVectorsBitcore1(_TestWalletVectorsBitcore):
 
     def test_m_0p_1_2p_2_1000000000(self):
         vector = [
-            'Ltpv7CNcMprvXc2ZzLAXxhuYeKL5N62NnpDsHNnS3gxFr7eJndZL3vKrXrvyMR2miDk7LSrRKQ7gSKWQwhCMLxuazuRFuCCZNbM5NXUBTrwAJwb',  # nopep8
-            'TAefeF5TJVCTFRozizQtVJ9ku6gs1EdBKko3yea23o6w3ESVhQZY',
-            'Ltub2dYwxcHTmkZXcCsNDKPviuAHoeiZs4nXMttTifiYnJRuNzkQNqNHYU3EbkUg3oz1WvkLs9vnNNGPa5vgHbeBjWZZ7YQbERi8E9GnAzXnVHw',  # nopep8
-            '02145bf57dcfe571710c61143adb44e80dd2ca44910b89406862962545fa567c96',  # nopep8
-            'LQWUfR2ybmJGyLSps2fVSTCa9zmr9p9RQi'
+            'xprvA2JDeKCSNNZky6uBCviVfJSKyQ1mDYahRjijr5idH2WwLsEd4Hsb2Tyh8RfQMuPh7f7RtyzTtdrbdqqsunu5Mm3wDvUAKRHSC34sJ7in334',  # nopep8 / BIP32 Extended Key
+            'KwjQsVuMjbCP2Zmr3VaFaStav7NvevwjvvkqrWd5Qmh1XVnCteBR', # Private Key (WIF)
+            'xpub6FHa3pjLCk84BayeJxFW2SP4XRrFd1JYnxeLeU8EqN3vDfZmbqBqaGJAyiLjTAwm6ZLRQUMv1ZACTj37sR62cfN7fe5JnJ7dh8zL4fiyLHV',  # nopep8 / Derived Public Key
+            '02e8445082a72f29b75ca48748a914df60622a609cacfce8ed0e35804560741d29',  # nopep8 / Public Key (Hex)
+            '1LjmJcdPnDHhNTUgrWyhLGnRDKxQjoxAgt' # Address
         ]
         key = (self.master_key.get_child(0, True)
                .get_child(1)
@@ -1182,11 +1182,11 @@ class TestWalletVectorsBitcore1(_TestWalletVectorsBitcore):
 class TestWalletVectorsBitcore2(_TestWalletVectorsBitcore):
 i    def test_m(self):
         vector = [
-            'Ltpv71G8qDifUiNetGsQje8NP1KYECbgKwSP2kugo4qN9GPfJ1KB8XMXxqBTYsA5PgwQaFV9u5PhKxosbjcnKKCPpPvaYVSUz24KMctXYig39Te',  # nopep8
-            'T4HX1Wffx49Wbdfog3RF31m7P611LT8KPc17ZB4USQTMCZhazwNn',
-            'Ltub2SSUS19CirucW9aEzFckTb9kfmHsQC137H1iU3bf5TBFtNWFTSPxySHioHCHEtCb3NPSZn1FJM6joFKevvxx6vV4ggaQcKiYzaNucXpRyY8',  # nopep8
-            '03b3204919fa92d16d869fc39f3510e0bc7b2ce53c1bf6124448f2cbbbaf29db38',  # nopep8
-            'Lbs921f129AWWyb5kfdtSefUgreidPwqAP'
+            'xprv9s21ZrQH143K31xYSDQpPDxsXRTUcvj2iNHm5NUtrGiGG5e2DtALGdso3pGz6ssrdK4PFmM8NSpSBHNqPqm55Qn3LqFtT2emdEXVYsCzC2U',  # nopep8 / BIP32 Extended Key
+            'KyjXhyHF9wTphBkfpxjL8hkDXDUSbE3tKANT94kXSyh6vn6nKaoy', # Private Key (WIF)
+            'xpub661MyMwAqRbcFW31YEwpkMuc5THy2PSt5bDMsktWQcFF8syAmRUapSCGu8ED9W6oDMSgv6Zz8idoc4a6mr8BDzTJY47LJhkJ8UB7WEGuduB',  # nopep8 / Derived Public Key
+            '03cbcaa9c98c877a26977d00825c956a238e8dddfbd322cce4f74b0b5bd6ace4a7',  # nopep8 / Public Key (Hex)
+            '1JEoxevbLLG8cVqeoGKQiAwoWbNYSUyYjg' # Address
         ]
         self._test(self.master_key, *vector)
         self._test_deserialize(self.master_key, *vector)
@@ -1194,11 +1194,11 @@ i    def test_m(self):
 
     def test_m_0(self):
         vector = [
-            'Ltpv74V6By3LY1k2RyNdNhyBCtTgxbu6VrSDx8177z5g9phb8mmiJnC5dyGEL1AxCX4BWWJEcZBxep1j7wAPUp3jXqramror3Rdtg76ZNfwqeMr',  # nopep8
-            'T9ARV5FUdiaXyp8boDPj9H2FjWxvdEUHaURrgsVeZjVFGTesNfku',
-            'Ltub2VfRnkTsnAGz3r5TdKTZHUHuQAbHa6zt2e78nxqy61VBj8xndhEWeaNVaQ6N8SLEPiF8UxEXkFBbPyKiutX6FhbKJXnQAaTRXw56e8zm2qs',  # nopep8
-            '03b18ba94530690859a3f6ebb2b866d151f8499b3164d027ba5b464e4ed71329aa',  # nopep8
-            'LftGBdKxo8aXqvs74g71692apDXQaPz17Z'
+            'xprv9vHkqa6EV4sPZHYqZznhT2NPtPCjKuDKGY38FBWLvgaDx45zo9WQRUT3dKYnjwih2yJD9mkrocEZXo1ex8G81dwSM1fwqWpWkeS3v86pgKt',  # nopep8 / BIP32 Extended Key
+            'L2ysLrR6KMSAtx7uPqmYpoTeiRzydXBattRXjXz5GDFPrdfPzKbj', # Private Key (WIF)
+            'xpub69H7F5d8KSRgmmdJg2KhpAK8SR3DjMwAdkxj3ZuxV27CprR9LgpeyGmXUbC6wb7ERfvrnKZjXoUmmDznezpbZb7ap6r1D3tgFxHmwMkQTPH',  # nopep8 / Derived Public Key
+            '02fc9e5af0ac8d9b3cecfe2a888e2117ba3d089d8585886c9c826b6b22a98d12ea',  # nopep8 / Public Key (Hex)
+            '19EuDJdgfRkwCmRzbzVBHZWQG9QNWhftbZ' # Address
         ]
         key = self.master_key.get_child(0)
         self._test(key, *vector)
@@ -1206,11 +1206,11 @@ i    def test_m(self):
 
     def test_m_0_2147483647p(self):
         vector = [
-            'Ltpv78CxVKndj3P8PDBogzwnrxY7Pxtzn8vgExPZFVHeM42MGGNQ9wUJ2isvXPDHLGehGi8DdeFgNPQTGRMEKH72242jutfwB7PFbeKMhSA3pqk',  # nopep8
-            'T3MWHKyN3BVcQ67wLR5H7rsJx3bhmbichmz3p38FeCrTjXE9Xbup',
-            'Ltub2ZPJ67DAyBv615tdwcSAwYNKqXbBrPVLKUVavU3wHEowrdZUUrWj3KzBmoW21GQSDZBNjMs2SZ2bdBREZLH3HcHT7W2DT6DZiNsNtsEZfqF',  # nopep8
-            '03b855e07eb1837015cbd465b921fb476f99b38cf575f61ec7f594f839f42b5057',  # nopep8
-            'Lbqhtn3eQTiyYKWvktnxGsgSa3bEa4kNrH'
+            'xprv9wSp6B7kry3Vj9m1zSnLvN3xH8RdsPP1Mh7fAaR7aRLcQMKTR2vidYEeEg2mUCTAwCd6vnxVrcjfy2kRgVsFawNzmjuHc2YmYRmagcEPdU9',  # nopep8 / BIP32 Extended Key
+            'L1m5VpbXmMp57P3knskwhoMTLdhAAaXiHvnGLMribbfwzVRpz2Sr', #Private Key (WIF)
+            'xpub6ASAVgeehLbnwdqV6UKMHVzgqAG8Gr6riv3Fxxpj8ksbH9ebxaEyBLZ85ySDhKiLDBrQSARLq1uNRts8RuJiHjaDMBU4Zn9h8LZNnBC5y4a',  # nopep8 / Derived Public Key
+            '03c01e7425647bdefa82b12d9bad5e3e6865bee0502694b94ca58b666abc0a5c3b',  # nopep8 / Public Key (Hex)
+            '1Lke9bXGhn5VPrBuXgN12uGUphrttUErmk' # Address
         ]
         key = (self.master_key.get_child(0).
                get_child(2147483647, True).
@@ -1220,11 +1220,11 @@ i    def test_m(self):
 
     def test_m_0_2147483647p_1(self):
         vector = [
-            'Ltpv78CxVKndj3P8PDBogzwnrxY7Pxtzn8vgExPZFVHeM42MGGNQ9wUJ2isvXPDHLGehGi8DdeFgNPQTGRMEKH72242jutfwB7PFbeKMhSA3pqk',  # nopep8
-            'T3MWHKyN3BVcQ67wLR5H7rsJx3bhmbichmz3p38FeCrTjXE9Xbup',
-            'Ltub2ZPJ67DAyBv615tdwcSAwYNKqXbBrPVLKUVavU3wHEowrdZUUrWj3KzBmoW21GQSDZBNjMs2SZ2bdBREZLH3HcHT7W2DT6DZiNsNtsEZfqF',  # nopep8
-            '03b855e07eb1837015cbd465b921fb476f99b38cf575f61ec7f594f839f42b5057',  # nopep8
-            'Lbqhtn3eQTiyYKWvktnxGsgSa3bEa4kNrH'
+            'xprv9zFnWC6h2cLgpmSA46vutJzBcfJ8yaJGg8cX1e5StJh45BBciYTRXSd25UEPVuesF9yog62tGAQtHjXajPPdbRCHuWS6T8XA2ECKADdw4Ef',  # nopep8 / BIP32 Extended Key
+            'KzyzXnznxSv249b4KuNkBwowaN3akiNeEHy5FWoPCJpStZbEKXN2', # Private Key (WIF)
+            'xpub6DF8uhdarytz3FWdA8TvFSvvAh8dP3283MY7p2V4SeE2wyWmG5mg5EwVvmdMVCQcoNJxGoWaU9DCWh89LojfZ537wTfunKau47EL2dhHKon',  # nopep8 / Derived Public Key
+            '03a7d1d856deb74c508e05031f9895dab54626251b3806e16b4bd12e781a7df5b9',  # nopep8 / Public Key (Hex)
+            '1BxrAr2pHpeBheusmd6fHDP2tSLAUa3qsW' # Address
         ]
         key = (self.master_key.get_child(0).
                get_child(2147483647, True).
@@ -1234,11 +1234,11 @@ i    def test_m(self):
 
     def test_m_0_2147483647p_1_2147483646p(self):
         vector = [
-            'Ltpv7A8P4c3YUGWoxQAsSeGJfm45zJW5fRcVqcvo9a1RifrR2z2EokC4JUnfb23mZDG1a5obbdA3KyfriaxfxdeiCCszjUwy4Tnx4NyZJhg2TXZ',  # nopep8
-            'T3JRr9ymVwWqVhsed96q3hcmKVgmqw2SKGQWepCkCTEmS8bDGRiL',
-            'Ltub2bJifPU5iR3maGshhFkgkLtJRsCGjgB9v92ppYmiere1dMDK8fEVK5tvqR9xBf37tXswdRY7T92jbT9L1borcpBXMhYe2cxiKB3HTCtKJf4',  # nopep8
-            '031b189497b7661fb452af508ee3e014aaac34b366fc4ea178573bf9263a824bc6',  # nopep8
-            'LPeSxqQM6qyFVAutnGwRDZbABLSMK7gtDD'
+            'xprvA1RpRA33e1JQ7ifknakTFpgNXPmW2YvmhqLQYMmrj4xJXXWYpDPS3xz7iAxn8L39njGVyuoseXzU6rcxFLJ8HFsTjSyQbLYnMpCqE2VbFWc',  # nopep8 / BIP32 Extended Key
+            'L5KhaMvPYRW1ZoFmRjUtxxPypQ94m6BcDrPhqArhggdaTbbAFJEF',# Private Key (WIF)
+            'xpub6ERApfZwUNrhLCkDtcHTcxd75RbzS1ed54G1LkBUHQVHQKqhMkhgbmJbZRkrgZw4koxb5JaHWkY4ALHY2grBGRjaDMzQLcgJvLJuZZvRcEL',  # nopep8 / Derived Public Key
+            '02d2b36900396c9282fa14628566582f206a5dd0bcc8d5e892611806cafb0301f0',  # nopep8 / Public Key (Hex)
+            '15XVotxCAV7sRx1PSCkQNsGw3W9jT9A94R' # Address
         ]
         key = (self.master_key.get_child(0)
                .get_child(2147483647, True)
@@ -1249,11 +1249,11 @@ i    def test_m(self):
 
     def test_m_0_2147483647p_1_2147483646p_2(self):
         vector = [
-            'Ltpv7B2Va6jguSVYkxsVaYVykvfVURqLTNQVn2pYs6MHFzVtFHPUAgCqbCMChCFPmvjDKfFJZQBmyztATaZTeLpaSvpP6zcaY5DJD5Qcr66MjTW',  # nopep8
-            'T6u7ZdbVd4B8KWuiTdirhwJ5NNrHG73WWVatXtktmGayPERcFMMa',
-            'Ltub2cCqAtAE9b2WNqaKq9zMqWVhuzXXXcy9rYvaY57aCBHUqeaYVbFGboTTwbhrJc6SezAA3mrUEKi3qey31HZHDnFfcwXYtkD3dbswWCRyKQu',  # nopep8
-            '03b47c7d3f7eb51023206f636276fe6c3a0c51752360b12ec556b86849ca47b3fe',  # nopep8
-            'Ld5QMVg5tych8UKBBs1Q2LxbbVFASfv3tf'
+            'xprvA2nrNbFZABcdryreWet9Ea4LvTJcGsqrMzxHx98MMrotbir7yrKCEXw7nadnHM8Dq38EGfSh6dqA9QWTyefMLEcBYJUuekgW4BYPJcr9E7j',  # nopep8 / BIP32 Extended Key
+            'L3WAYNAZPxx1fr7KCz7GN9nD5qMBnNiqEJNJMU1z9MMaannAt4aK', # Private Key (WIF)
+            'xpub6FnCn6nSzZAw5Tw7cgR9bi15UV96gLZhjDstkXXxvCLsUXBGXPdSnLFbdpq8p9HmGsApME5hQTZ3emM2rnY5agb9rXpVGyy3bdW6EEgAtqt',  # nopep8 / Derived Public Key
+            '024d902e1a2fc7a8755ab5b694c575fce742c48d9ff192e63df5193e4c7afe1f9c',  # nopep8 / Public Key (Hex)
+            '14UKfRV9ZPUp6ZC9PLhqbRtxdihW9em3xt' # Address
         ]
         key = (self.master_key.get_child(0)
                .get_child(2147483647, True)

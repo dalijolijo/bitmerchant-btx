@@ -1,4 +1,4 @@
-"""Generate a JSON dump of keys for validating bitmerchant-btx.wallet.keys.
+"""Generate a JSON dump of keys for validating bitmerchantx.wallet.keys.
 
 First install bitcoind and run
 

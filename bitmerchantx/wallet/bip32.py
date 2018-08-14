@@ -79,7 +79,7 @@ class Wallet(object):
             if not isinstance(private_key, PrivateKey):
                 raise InvalidPrivateKeyError(
                     "private_key must be of type "
-                    "bitmerchant-btx.wallet.keys.PrivateKey")
+                    "bitmerchantx.wallet.keys.PrivateKey")
             self.private_key = private_key
         elif private_exponent:
             self.private_key = PrivateKey(
@@ -89,7 +89,7 @@ class Wallet(object):
             if not isinstance(public_key, PublicKey):
                 raise InvalidPublicKeyError(
                     "public_key must be of type "
-                    "bitmerchant-btx.wallet.keys.PublicKey")
+                    "bitmerchantx.wallet.keys.PublicKey")
             self.public_key = public_key
         elif public_pair:
             self.public_key = PublicKey.from_public_pair(

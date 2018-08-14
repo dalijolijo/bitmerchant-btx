@@ -7,21 +7,21 @@ from unittest import TestCase
 from ecdsa import SECP256k1
 from ecdsa.ellipticcurve import INFINITY
 
-from bitmerchant-btx.network import BitcoinMainNet
-from bitmerchant-btx.network import BitcoinTestNet
-from bitmerchant-btx.network import DogecoinMainNet
-from bitmerchant-btx.network import LitecoinMainNet
-from bitmerchant-btx.network import BitcoreMainNet
-from bitmerchant-btx.wallet import Wallet
-from bitmerchant-btx.wallet.bip32 import InfinityPointException
-from bitmerchant-btx.wallet.bip32 import InsufficientKeyDataError
-from bitmerchant-btx.wallet.bip32 import InvalidPathError
-from bitmerchant-btx.wallet.bip32 import InvalidPrivateKeyError
-from bitmerchant-btx.wallet.bip32 import InvalidPublicKeyError
-from bitmerchant-btx.wallet.bip32 import KeyMismatchError
-from bitmerchant-btx.wallet.keys import IncompatibleNetworkException
-from bitmerchant-btx.wallet.utils import ensure_bytes
-from bitmerchant-btx.wallet.utils import long_to_hex
+from bitmerchantx.network import BitcoinMainNet
+from bitmerchantx.network import BitcoinTestNet
+from bitmerchantx.network import DogecoinMainNet
+from bitmerchantx.network import LitecoinMainNet
+from bitmerchantx.network import BitcoreMainNet
+from bitmerchantx.wallet import Wallet
+from bitmerchantx.wallet.bip32 import InfinityPointException
+from bitmerchantx.wallet.bip32 import InsufficientKeyDataError
+from bitmerchantx.wallet.bip32 import InvalidPathError
+from bitmerchantx.wallet.bip32 import InvalidPrivateKeyError
+from bitmerchantx.wallet.bip32 import InvalidPublicKeyError
+from bitmerchantx.wallet.bip32 import KeyMismatchError
+from bitmerchantx.wallet.keys import IncompatibleNetworkException
+from bitmerchantx.wallet.utils import ensure_bytes
+from bitmerchantx.wallet.utils import long_to_hex
 
 
 class TestWallet(TestCase):
@@ -132,8 +132,8 @@ class TestWallet(TestCase):
     def test_random_wallet_with_entropy(self):
         """Ensure that the user_entropy value actually adds entropy."""
         test_time = time.time()
-        with patch('bitmerchant-btx.wallet.bip32.urandom', return_value=b'0'*64):
-            with patch('bitmerchant-btx.wallet.bip32.time') as mock_time:
+        with patch('bitmerchantx.wallet.bip32.urandom', return_value=b'0'*64):
+            with patch('bitmerchantx.wallet.bip32.time') as mock_time:
                 mock_time.time.return_value = test_time
                 self.assertEqual(
                     Wallet.new_random_wallet('entropy'),
@@ -204,7 +204,7 @@ class TestInvalidChildren(TestCase):
 
     def test_infinity_point(self):
         w = Wallet.new_random_wallet()
-        with patch('bitmerchant-btx.wallet.keys.PublicKey.to_point',
+        with patch('bitmerchantx.wallet.keys.PublicKey.to_point',
                    return_value=INFINITY):
             self.assertRaises(
                 InfinityPointException,

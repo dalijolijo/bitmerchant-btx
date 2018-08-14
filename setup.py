@@ -19,7 +19,7 @@ def load_version():
     Inspired by http://stackoverflow.com/a/7071358
     """
     import re
-    version_file = "bitmerchant-btx/_version.py"
+    version_file = "bitmerchantx/_version.py"
     version_line = open(version_file).read().rstrip()
     vre = re.compile(r'__version__ = "([^"]+)"')
     matches = vre.findall(version_line)
@@ -34,15 +34,15 @@ version = load_version()
 long_description = load_readme()
 
 setup(
-    name='bitmerchant-btx',
+    name='bitmerchantx',
     version=version,
     description="BitCore BTX merchant tools",
     long_description=long_description,
     author='David Bergen',
     author_email='david.bergen@gmx.net',
-    url='https://github.com/dalijolijo/bitmerchant-btx',
+    url='https://github.com/dalijolijo/bitmerchantx',
     download_url=(
-        'https://github.com/dalijolijo/bitmerchant-btx/tarball/v%s' % version),
+        'https://github.com/dalijolijo/bitmerchantx/tarball/v%s' % version),
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
@@ -60,8 +60,8 @@ setup(
         "Programming Language :: Python :: 3.4",
     ],
     packages=[
-        'bitmerchant-btx',
-        'bitmerchant-btx.wallet',
+        'bitmerchantx',
+        'bitmerchantx.wallet',
     ],
     package_data={'': ['AUTHORS', 'LICENSE']},
     include_package_data=True,

@@ -4,7 +4,7 @@
 .. image:: http://codecov.io/github/sbuss/bitmerchant/coverage.svg?branch=master
     :target: http://codecov.io/github/sbuss/bitmerchant?branch=master
 
-Bitmerchant (bitmerchant-btx supports BitCore BTX)
+Bitmerchant (bitmerchantx supports BitCore BTX)
 ==================================================
 
 Bitmerchant is a work-in-progress python library for common bitcoin/altcoin
@@ -27,19 +27,19 @@ These features are planned (or in development where marked):
 Installation
 ============
 
-bitmerchant-btx is on pypi_, so just use pip:
+bitmerchantx is on pypi_, so just use pip:
 
-.. _pypi: https://pypi.python.org/pypi/bitmerchant-btx
+.. _pypi: https://pypi.python.org/pypi/bitmerchantx
 
 .. code-block:: bash
 
-    pip install bitmerchant-btx
+    pip install bitmerchantx
 
 Then to verify it's working:
 
 .. code-block:: python
 
-    from bitmerchant-btx.wallet import Wallet
+    from bitmerchantx.wallet import Wallet
 
     w = Wallet.from_master_secret("correct horse battery staple")
     assert w.to_address() == "1AJ7EDxyRwyGNcL4scXfUU7XqYkmVcwHqe"
@@ -60,7 +60,7 @@ TL;DR
 .. code-block:: python
 
     ## DO THIS ON AN OFFLINE MACHINE, NOT YOUR WEBSERVER
-    from bitmerchant-btx.wallet import Wallet
+    from bitmerchantx.wallet import Wallet
 
     # Create a wallet, and a primary child wallet for your app
     my_wallet = Wallet.new_random_wallet()
@@ -76,7 +76,7 @@ TL;DR
     WALLET_PUBKEY = "<public output from above>"
 
     # Create a payment address for a user as needed:
-    from bitmerchant-btx.wallet import Wallet
+    from bitmerchantx.wallet import Wallet
     from myapp.settings import WALLET_PUBKEY
 
     def get_payment_address_for_user(user):
@@ -98,7 +98,7 @@ private child. In other words:
 
 .. code-block:: python
 
-    from bitmerchant-btx.wallet import Wallet
+    from bitmerchantx.wallet import Wallet
 
     w = Wallet.new_random_wallet()
     child = w.get_child(0, is_prime=False)  # public derivation of a private child
@@ -141,7 +141,7 @@ be able to retrieve the coins sent to your public addresses.
 
 .. code-block:: python
 
-    from bitmerchant-btx.wallet import Wallet
+    from bitmerchantx.wallet import Wallet
 
     my_wallet = Wallet.new_random_wallet()
 
@@ -161,7 +161,7 @@ the keyboard. Here's an example, yours should be *much* longer:
 
 .. code-block:: python
 
-    from bitmerchant-btx.wallet import Wallet
+    from bitmerchantx.wallet import Wallet
 
     wallet1 = Wallet.new_random_wallet('asdfasdfasdf')
     wallet2 = Wallet.new_random_wallet('asdfasdfasdf')
@@ -216,7 +216,7 @@ private key. Just pass in the user ID that needs a wallet:
 
 .. code-block:: python
 
-    from bitmerchant-btx.wallet import Wallet
+    from bitmerchantx.wallet import Wallet
     from myapp.settings import WALLET_PUBKEY  # Created above
 
     master_wallet = Wallet.deserialize(WALLET_PUBKEY)
@@ -262,7 +262,7 @@ wallet they can spend all funds in all child wallets.
 You should create your wallet on a computer that is not connected to the
 internet. Ideally, this computer will *never* be connected to the internet
 after you generate your private key. The safest way to do this is to run Ubuntu
-on a livecd, install python and bitmerchant-btx, and generate a new wallet.
+on a livecd, install python and bitmerchantx, and generate a new wallet.
 
 Once you generate a new wallet you should write down the private key on a piece
 of paper (or print it out ...but can you *really* trust your printer?) and
@@ -273,7 +273,7 @@ store it in a secure location.
     sudo apt-get install python
     sudo apt-get install pip
 
-    pip install bitmerchant-btx
+    pip install bitmerchantx
     pip install ipython
 
     # Then launch the ipython shell
@@ -283,7 +283,7 @@ Once inside your ipython shell, generate a new wallet:
 
 .. code-block:: python
 
-    from bitmerchant-btx.wallet import Wallet
+    from bitmerchantx.wallet import Wallet
 
     my_wallet = Wallet.new_random_wallet()
 

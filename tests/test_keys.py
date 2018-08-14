@@ -3,18 +3,18 @@ from unittest import TestCase
 
 import base58
 
-from bitmerchant-btx.network import BitcoinMainNet
-from bitmerchant-btx.network import BitcoinTestNet
-from bitmerchant-btx.network import DogecoinMainNet
-from bitmerchant-btx.network import LitecoinMainNet
-from bitmerchant-btx.network import BitcoreMainNet
-from bitmerchant-btx.wallet.keys import ChecksumException
-from bitmerchant-btx.wallet.keys import IncompatibleNetworkException
-from bitmerchant-btx.wallet.keys import KeyParseError  # TODO test this
-from bitmerchant-btx.wallet.keys import PrivateKey
-from bitmerchant-btx.wallet.keys import PublicKey
-from bitmerchant-btx.wallet.utils import ensure_bytes
-from bitmerchant-btx.wallet.utils import long_or_int
+from bitmerchantx.network import BitcoinMainNet
+from bitmerchantx.network import BitcoinTestNet
+from bitmerchantx.network import DogecoinMainNet
+from bitmerchantx.network import LitecoinMainNet
+from bitmerchantx.network import BitcoreMainNet
+from bitmerchantx.wallet.keys import ChecksumException
+from bitmerchantx.wallet.keys import IncompatibleNetworkException
+from bitmerchantx.wallet.keys import KeyParseError  # TODO test this
+from bitmerchantx.wallet.keys import PrivateKey
+from bitmerchantx.wallet.keys import PublicKey
+from bitmerchantx.wallet.utils import ensure_bytes
+from bitmerchantx.wallet.utils import long_or_int
 
 
 class _TestPrivateKeyBase(TestCase):
@@ -123,7 +123,7 @@ class TestPublicKey(_TestPublicKeyBase):
         pvk = '18E14A7B6A307F426A94F8114701E7C8E774E7F9A47E2C2035DB29A206321725'  # nopep8
         from ecdsa import SECP256k1
         from ecdsa.ecdsa import Public_key
-        from bitmerchant-btx.wallet.utils import long_to_hex
+        from bitmerchantx.wallet.utils import long_to_hex
 
         pubkey = Public_key(
             SECP256k1.generator,

@@ -199,7 +199,7 @@ class PublicKey(Key):
         :type verifying_key: ecdsa.VerifyingKey
         :param network: The network you want (Networks just define certain
             constants, like byte-prefixes on public addresses).
-        :type network: See `bitmerchant-btx.wallet.network`
+        :type network: See `bitmerchantx.wallet.network`
         """
         super(PublicKey, self).__init__(network=network, *args, **kwargs)
         self._verifying_key = verifying_key
